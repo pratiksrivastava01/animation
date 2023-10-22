@@ -5,8 +5,11 @@ import styles from "./page.module.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// const phrase =
+//   "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.";
+
 const phrase =
-  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.";
+  "From the moment I met you, Puspam, my life took on new meaning. Your smile brightens my darkest days, and your laughter is like music to my soul. With you, I've discovered a love so deep and profound that I can't imagine my life without you in it. Today, as I stand before you, Puspam, I want to share my deepest feelings with you. You are my sunshine, my confidant, and my greatest joy. I promise to cherish and adore you for the rest of my days. Will you make me the happiest person in the world and be with me forever?";
 
 const Textopacity = () => {
   let refs = useRef([]);
@@ -24,11 +27,11 @@ const Textopacity = () => {
         trigger: container.current,
         scrub: true,
         start: `top`,
-        end: `+=${window.innerHeight / 1.5}`,
+        end: `+=${window.innerHeight}`,
       },
       opacity: 1,
       ease: "none",
-      stagger: 0.01,
+      stagger: 0.02,
     });
   };
 
