@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import styles from "./page.module.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SmoothScroll from "@/components/smoothScroll";
 
 const phrase =
   "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.";
@@ -59,11 +60,13 @@ const page = () => {
   };
 
   return (
-    <main ref={container} className={styles.main}>
-      <div ref={body} className={styles.body}>
-        {splitWords(phrase)}
-      </div>
-    </main>
+    <SmoothScroll>
+      <main ref={container} className={styles.main}>
+        <div ref={body} className={styles.body}>
+          {splitWords(phrase)}
+        </div>
+      </main>
+    </SmoothScroll>
   );
 };
 

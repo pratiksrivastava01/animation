@@ -1,7 +1,12 @@
+import SmoothScroll from "@/components/smoothScroll";
 import React from "react";
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <SmoothScroll>
+      <div>page</div>
+    </SmoothScroll>
+  );
 };
 
 export default page;
